@@ -34,6 +34,10 @@ cc_library_headers {
     export_include_dirs: ["include"],
     vendor_available: true,
     sdk_version: "current",
+    visibility: [
+        "//external/XNNPACK",
+        "//external/pthreadpool",
+    ],
 }
 
 cc_defaults {
@@ -48,7 +52,7 @@ cc_defaults {
     stl: "libc++_static",
     static_libs: [
         "libgmock_ndk",
-    ]
+    ],
 }
 
 cc_test {
